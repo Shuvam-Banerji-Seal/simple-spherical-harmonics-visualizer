@@ -29,7 +29,7 @@ pip install numpy matplotlib scipy
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/Shuvam-Banerji-Seal/simple-spherical-harmonics-visualizer.git](https://github.com/Shuvam-Banerji-Seal/simple-spherical-harmonics-visualizer.git)
+   git clone https://github.com/Shuvam-Banerji-Seal/simple-spherical-harmonics-visualizer.git
    ```
 
 2. Navigate to the project directory:
