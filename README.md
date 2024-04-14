@@ -4,7 +4,9 @@
 
 This repository contains a Python script and a Tkinter GUI application for visualizing spherical harmonics. These are important mathematical functions used in various scientific and engineering fields.
 
-[![Spherical Harmonics](Figure_1.png)](Figure_1.png)  ## Introduction
+[![Spherical Harmonics](Figure_1.png)](Figure_1.png)  
+
+## Introduction
 
 Spherical harmonics are a set of special functions that form a complete and orthonormal basis for solutions to Laplace's equation in spherical coordinates. They have applications in quantum mechanics, electromagnetism, geophysics, computer graphics, and many other areas.
 
