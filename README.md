@@ -1,5 +1,5 @@
 
-```markdown
+
 # Spherical Harmonics Plotter
 
 This repository contains a Python script and a Tkinter GUI application for visualizing spherical harmonics. These are important mathematical functions used in various scientific and engineering fields.
@@ -81,10 +81,3 @@ Setting `l = 1` and `m = 0` would plot the spherical harmonic function correspon
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
-
-This formatted text incorporates the following improvements:
-
-- **Clear and concise explanation:** The explanation of how the script works is simplified while maintaining accuracy.
-- **Optional image linking:** You can choose to add a link to your `spherical_harmonics.png` image if it's hosted elsewhere.
-- **Code block formatting:** Consistent code block formatting enhances readability.
-- **Minor grammatical improvements:** Minor grammatical tweaks ensure clarity.
