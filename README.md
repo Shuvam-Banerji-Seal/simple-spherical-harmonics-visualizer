@@ -2,43 +2,106 @@
 
 # Spherical Harmonics Plotter
 
-This repository contains a Python script and a Tkinter GUI application for visualizing spherical harmonics. These are important mathematical functions used in various scientific and engineering fields.
+"This repository contains a Python script and a Tkinter GUI application for visualizing spherical harmonics. These are important mathematical functions used in various scientific and engineering fields." -- Well that was before.
+
+Now it contains a new Flask and dash app gui with some html as it does the plotting using plotly.
 
 [![Spherical Harmonics](Figure_1.png)](Figure_1.png)  
+[![Spherical Harmonics Dash App](spherical_harmonics_flask.png)](![Figure_1.png](spherical_harmonics_flask.png))  
 
 ## Introduction
 
 Spherical harmonics are a set of special functions that form a complete and orthonormal basis for solutions to Laplace's equation in spherical coordinates. They have applications in quantum mechanics, electromagnetism, geophysics, computer graphics, and many other areas.
 
-## Dependencies
 
-To run the code, you'll need the following Python libraries:
-
-- `numpy`: For numerical computing.
-- `matplotlib`: For creating visualizations.
-- `scipy`: For scientific computing, including the `sph_harm` function.
-
-You can install these dependencies using pip:
-
-```bash
-pip install numpy matplotlib scipy
-```
 
 ## Installation
 
-1. Clone the repository:
+1. Clone this repository:
+```bash
+git clone https://github.com/Shuvam-Banerji-Seal/simple-spherical-harmonics-visualizer.git
+cd simple-spherical-harmonics-visualizer
+```
 
-   ```bash
-   git clone https://github.com/Shuvam-Banerji-Seal/simple-spherical-harmonics-visualizer.git
+2. Create and activate a virtual environment (recommended):
+```bash
+# On Windows
+python -m venv venv
+.\venv\Scripts\activate
+
+# On macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. Install the required packages:
+```bash
+pip install -r requirements.txt
+```
+
+## Running the Application
+
+1. With the virtual environment activated, run:
+```bash
+python app.py
+```
+
+2. Open your web browser and navigate to:
+```
+http://127.0.0.1:8050/
+```
+
+## Usage Guide
+
+1. **Selecting Visualization Type**
+   - Use the dropdown menu to choose between Points, Surface, Wireframe, or Contour views
+   - Each mode offers a different perspective on the spherical harmonic
+
+2. **Adjusting Quantum Numbers**
+   - l (Degree): Controls the overall complexity of the pattern
+     - Higher l values create more complex patterns
+     - Use either the slider or input box with arrow button
+   
+   - m (Order): Determines the azimuthal pattern
+     - Range is from -l to +l
+     - Controls the number of nodal planes going through the poles
+
+3. **Point Density Control**
+   - Use the density slider to adjust visualization detail
+   - Higher density provides smoother visualization but may be slower
+
+4. **Interaction Tips**
+   - Click and drag to rotate the 3D view
+   - Scroll to zoom in/out
+   - Double-click to reset the view
+   - Hover over points/surfaces to see exact values
+
+## Mathematical Details
+
+The spherical harmonics are computed using the formula:
+
+Y_lm(θ,φ) = N_lm * P_lm(cos θ) * e^(imφ)
+
+Where:
+1. N_lm is the normalization factor:
+   ```
+   N_lm = sqrt((2l+1)/(4π) * (l-m)!/(l+m)!)
    ```
 
-2. Navigate to the project directory:
+2. P_lm is the associated Legendre polynomial:
+   - Special functions that arise as solutions to Legendre's differential equation
+   - Implemented efficiently via SciPy's `sph_harm` function
 
-   ```bash
-   cd spherical-harmonics-plotter
-   ```
+3. The visualization shows the real part of Y_lm, as these functions are generally complex-valued
 
-## Usage
+Common patterns:
+- l = 0: Spherically symmetric (constant)
+- l = 1: p-orbitals (dipole patterns)
+- l = 2: d-orbitals (quadrupole patterns)
+- m = 0: Axially symmetric around z-axis
+- |m| = l: Maximum number of angular nodes
+
+## Usage-Old tk code
 
 1. Run the script:
 
@@ -83,3 +146,5 @@ Setting `l = 1` and `m = 0` would plot the spherical harmonic function correspon
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
+
+
